@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+const {Schema , model} = mongoose
 
 // Define the schema for tasks
-const taskSchema = new mongoose.Schema({
+const taskSchema = new Schema({
     title: {
         type: String,
         required: [true, 'Task title is required'], // Task must have a title, otherwise returns this message
@@ -34,7 +35,7 @@ const taskSchema = new mongoose.Schema({
 });
 
 // Create the Task model from the schema
-const Task = mongoose.model('Task', taskSchema);
+const Task = model('Task', taskSchema);
 
 // Export the Task model
 module.exports = Task;
