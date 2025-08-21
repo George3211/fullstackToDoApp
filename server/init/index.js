@@ -11,7 +11,7 @@ const initDb = async () => {
 
     let tasks = await Task.insertMany(data);
 
-    console.log(Task);
+    console.log(tasks);
     console.log(`task initialized`);
 };
 
