@@ -1,3 +1,7 @@
-module.exports.getTask = (req, res) => {
-    res.json({message: "All Tasks here"})
+const Task = require("../models/Task");
+
+module.exports.getTask = async (req, res) => {
+    let tasks = await Task.find();
+    
+    res.json({tasks})
 }
