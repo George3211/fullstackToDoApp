@@ -35,7 +35,17 @@ const Task = () => {
             </div>
 
             <div>
-              {obj.status}
+              <form className="max-w-sm mx-auto">
+                <label htmlFor="underline_select" className="sr-only">Underline select</label>
+
+                <select id="underline_select" className="block py-2.5 px-0 w-full text-sm text-gray-500
+                bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400
+                dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                  <option value="pending" selected>Pending</option>
+                  <option value="in-progress">In-progress</option>
+                  <option value="completed">Completed</option>
+                </select>
+              </form>
             </div>
 
             <div>
